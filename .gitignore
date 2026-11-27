@@ -8,3 +8,7 @@ dist
 .env.*
 *.tsbuildinfo
 .DS_Store
+
+# void init が node_modules 内へのシンボリックリンクとして作る。リンク先がインストールごとに変わる
+.claude/skills/
+.claude/settings.local.json

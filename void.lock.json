@@ -2,6 +2,7 @@
   "version": 1,
   "source": {
     "name": "card-manager",
+    "account_id": "26f8a373d52d06677bba9537fd885e72",
     "routes": [
       {
         "pattern": "card-man.cloud-ae.dev",
@@ -13,6 +14,12 @@
   },
   "resolved": {
     "name": "card-manager",
+    "routes": [
+      {
+        "pattern": "card-man.cloud-ae.dev",
+        "custom_domain": true
+      }
+    ],
     "workers_dev": false,
     "preview_urls": true,
     "account_id": "26f8a373d52d06677bba9537fd885e72",
@@ -24,13 +31,7 @@
         "database_id": "f97f0517-e3f5-435b-8dea-307a19cda3b6",
         "migrations_dir": "./db/migrations"
       }
-    ],
-    "routes": [
-      {
-        "pattern": "card-man.cloud-ae.dev",
-        "custom_domain": true
-      }
     ]
   },
-  "text": "{\n  \"name\": \"card-manager\",\n  \"workers_dev\": false,\n  \"preview_urls\": true,\n  \"account_id\": \"26f8a373d52d06677bba9537fd885e72\",\n  \"compatibility_date\": \"2026-02-24\",\n  \"d1_databases\": [\n    {\n      \"binding\": \"DB\",\n      \"database_name\": \"card-manager-db\",\n      \"database_id\": \"f97f0517-e3f5-435b-8dea-307a19cda3b6\",\n      \"migrations_dir\": \"./db/migrations\"\n    }\n  ],\n  \"routes\": [\n    {\n      \"pattern\": \"card-man.cloud-ae.dev\",\n      \"custom_domain\": true\n    }\n  ]\n}\n"
+  "text": "{\n  \"name\": \"card-manager\",\n  \"routes\": [\n    {\n      \"pattern\": \"card-man.cloud-ae.dev\",\n      \"custom_domain\": true\n    }\n  ],\n  \"workers_dev\": false,\n  \"preview_urls\": true,\n  \"account_id\": \"26f8a373d52d06677bba9537fd885e72\",\n  \"compatibility_date\": \"2026-02-24\",\n  \"d1_databases\": [\n    {\n      \"binding\": \"DB\",\n      \"database_name\": \"card-manager-db\",\n      \"database_id\": \"f97f0517-e3f5-435b-8dea-307a19cda3b6\",\n      \"migrations_dir\": \"./db/migrations\"\n    }\n  ]\n}\n"
 }

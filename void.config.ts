@@ -10,6 +10,8 @@ export default defineConfig({
   },
   cloudflare: {
     name: "card-manager",
+    // CI には .void-wrangler.jsonc が無いため、デプロイ先のアカウントをここで固定する
+    account_id: "26f8a373d52d06677bba9537fd885e72",
     // ダッシュボードで追加したドメインをここにも書かないと、void deploy がルートを同期する際に外してしまう
     routes: [{ pattern: "card-man.cloud-ae.dev", custom_domain: true }],
     // Access で保護しているのはカスタムドメインとプレビュー URL だけ。workers.dev を有効にすると保護されない入口が増える

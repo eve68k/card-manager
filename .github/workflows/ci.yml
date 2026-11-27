@@ -1,0 +1,22 @@
+name: CI
+on:
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # pnpm/action-setup と setup-node ではなく mise.toml を読ませ、手元と同じ Node / pnpm に揃える
+      - uses: jdx/mise-action@v5
+      - run: pnpm install --frozen-lockfile
+      - name: Format and lint
+        run: pnpm exec vp check
+      - name: Type check
+        run: pnpm exec tsc --noEmit -p .
+      - name: Build
+        run: pnpm build
