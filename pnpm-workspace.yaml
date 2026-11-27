@@ -1,11 +1,11 @@
 minimumReleaseAgeExclude:
-  - '@void/deploy-cloudflare@1.12.0'
-  - '@void/deploy-core@1.12.0'
-  - '@void/edge@1.12.0'
-  - '@void/isr@1.12.0'
-  - '@void/platform@1.12.0'
+  - "@void/deploy-cloudflare@1.12.0"
+  - "@void/deploy-core@1.12.0"
+  - "@void/edge@1.12.0"
+  - "@void/isr@1.12.0"
+  - "@void/platform@1.12.0"
   - void@1.12.0
-  - '@void/react@1.12.0'
+  - "@void/react@1.12.0"
 
 allowBuilds:
   better-sqlite3: false
