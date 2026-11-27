@@ -20,5 +20,8 @@ jobs:
         run: pnpm exec tsc --noEmit -p .
       - name: Test
         run: pnpm exec vp test run
+      # void deploy には dry-run がなく、void db reset は破壊的変更の検査を通さないため、空のローカル D1 への migrate で検査させる
+      - name: Validate migrations
+        run: pnpm exec void db migrate
       - name: Build
         run: pnpm build
