@@ -10,5 +10,5 @@
     "types": ["void/env"],
     "jsx": "react-jsx"
   },
-  "include": ["src", "pages", "routes", "middleware", "crons", "queues", "db"]
+  "include": ["src", "pages", "routes", "middleware", "crons", "queues", "db", "tests"]
 }
