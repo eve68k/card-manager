@@ -5,6 +5,14 @@ export default defineConfig({
   routing: {
     typedRoutes: true,
   },
+  head: {
+    titleTemplate: "%s | 名刺管理",
+    htmlAttrs: { lang: "ja" },
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+    ],
+  },
   worker: {
     compatibility_date: "2026-02-24",
   },
