@@ -18,5 +18,7 @@ jobs:
         run: pnpm exec vp check
       - name: Type check
         run: pnpm exec tsc --noEmit -p .
+      - name: Test
+        run: pnpm exec vp test run
       - name: Build
         run: pnpm build
