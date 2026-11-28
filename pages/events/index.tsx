@@ -12,7 +12,10 @@ function todayInJapan(): string {
 
 export default function EventsPage({ events }: Props) {
   const [creating, setCreating] = useState(false);
-  const form = useForm("/events", emptyEventForm);
+  const form = useForm("/events", emptyEventForm, {
+    resetOnSuccess: true,
+    onSuccess: () => setCreating(false),
+  });
 
   return (
     <>

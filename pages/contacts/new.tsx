@@ -2,11 +2,8 @@ import { Form, useForm } from "@void/react";
 import { ContactFields, emptyContactForm } from "../../src/components/ContactFields";
 import type { Props } from "./new.server";
 
-export default function NewContactPage({ events, preselectedEventId }: Props) {
-  const form = useForm("/contacts/new", {
-    ...emptyContactForm,
-    eventIds: preselectedEventId ? [preselectedEventId] : [],
-  });
+export default function NewContactPage({ events }: Props) {
+  const form = useForm("/contacts/new", emptyContactForm);
 
   return (
     <>
