@@ -1,4 +1,4 @@
-import { action, Form, Link, useForm } from "@void/react";
+import { action, Form, useForm } from "@void/react";
 import { useState } from "react";
 import { ConfirmDeleteButton } from "../../../src/components/ConfirmDeleteButton";
 import { ContactList } from "../../../src/components/ContactList";
@@ -62,12 +62,7 @@ export default function EventPage({ event, contacts }: Props) {
       )}
 
       <section className="detail-section">
-        <div className="page-heading">
-          <h2>出会った人 ({contacts.length})</h2>
-          <Link href="/contacts/new" data={{ event: event.id }} className="button primary small">
-            ＋ 追加
-          </Link>
-        </div>
+        <h2>出会った人 ({contacts.length})</h2>
         {contacts.length === 0 ? (
           <p className="empty">まだ誰もいません。</p>
         ) : (

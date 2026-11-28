@@ -1,5 +1,4 @@
 import { defineHandler, defineHead, type InferProps } from "void";
-import { routeUrl } from "void/routes";
 import { createEvent, listEvents } from "../../src/repository";
 import { eventInputSchema } from "../../src/schemas";
 
@@ -11,9 +10,8 @@ export const loader = defineHandler(async () => {
 
 export const action = defineHandler.withValidator({
   body: eventInputSchema,
-})(async (c, { body }) => {
-  const id = await createEvent(body);
-  return c.redirect(routeUrl("/events/[id]", { params: { id } }));
+})(async (_c, { body }) => {
+  await createEvent(body);
 });
 
 export const head = defineHead(() => ({ title: "イベント" }));
